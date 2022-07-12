@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :conditions, only: [:index, :show]
     end
   end
+
+  resources :conditions, only: [:index, :show]
 end
