@@ -1,7 +1,9 @@
 <h1>Conditions</h1>
 
 <% @conditions.each do |condition| %>
-  <p><%= condition.name %></p>
-  <p><%= condition.description %></p>
-  <p><%= condition.source %></p>
+  <% cache condition do %>
+    <p><%= condition.name %></p>
+    <p><%= condition.description %></p>
+    <p><%= condition.source %></p>
+  <% end %>
 <% end %>
